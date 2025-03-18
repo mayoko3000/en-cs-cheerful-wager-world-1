@@ -1,0 +1,69 @@
+
+/* Card animations */
+@keyframes dealCard {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Pulse animation for active player */
+@keyframes pulse-soft {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(251, 191, 36, 0);
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s infinite;
+}
+
+/* Chip animations */
+.chip {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  border: 3px dashed rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+.chip::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.chip-5 {
+  background: linear-gradient(135deg, #e53e3e, #c53030);
+  color: white;
+}
+
+.chip-10 {
+  background: linear-gradient(135deg, #3182ce, #2c5282);
+  color: white;
+}
+
+.chip-25 {
+  background: linear-gradient(135deg, #38a169, #276749);
+  color: white;
+}
+
+.chip-100 {
+  background: linear-gradient(135deg, #6b46c1, #44337a);
+  color: white;
+}
